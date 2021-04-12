@@ -48,3 +48,29 @@ SELECT * FROM retiring_titles;
 DROP TABLE retiring_titles;
 -- ------------------------------
 
+
+
+
+
+
+-- Deliverable 2: --
+SELECT DISTINCT ON (tit.emp_no) emp.emp_no,
+	emp.first_name,
+	emp.last_name,
+	emp.birth_date,
+	depemp.from_date,
+	depemp.to_date,
+	tit.title
+INTO mentorship_eligibility
+FROM employees as emp
+INNER JOIN dept_emp as depemp
+ON emp.emp_no = depemp.emp_no
+INNER JOIN titles as tit
+ON tit.emp_no = emp.emp_no
+WHERE (emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+	 AND (tit.to_date = '9999-01-01')
+ORDER BY tit.emp_no;
+
+SELECT * FROM mentorship_eligibility;
+DROP TABLE mentorship_eligibility;
+
