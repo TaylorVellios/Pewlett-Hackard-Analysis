@@ -74,3 +74,30 @@ ORDER BY tit.emp_no;
 SELECT * FROM mentorship_eligibility;
 DROP TABLE mentorship_eligibility;
 
+
+
+
+
+
+
+
+-- For Analysis -- 
+-- Additional Tables for Deliverable 3
+-- To Find: Number of employees eligible for mentorship vs number of employees retiring
+		-- How many roles need to be filled as people start retiring and the mentored move up?
+
+
+-- Counts of employees eligible for mentorship
+SELECT COUNT(ment.title), 
+	ment.title
+
+INTO trainees
+FROM mentorship_eligibility as ment
+GROUP BY ment.title
+ORDER BY COUNT(ment.title) DESC;
+
+-- ----------------
+SELECT * FROM trainees;
+DROP TABLE trainees;
+
+
