@@ -52,6 +52,8 @@ WHERE (emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 	 AND (tit.to_date = '9999-01-01')
 ORDER BY tit.emp_no;
 ~~~~
+<br>
+Becomes..
 <br></br>
 ![pic4](https://user-images.githubusercontent.com/14188580/114931282-a7a6a300-9dfb-11eb-8e2f-f82cda6d3db1.PNG)
 <br></br>
@@ -71,7 +73,8 @@ They have been joined together to create the following image:<br></br>
 ![ALLCOUNTS](https://user-images.githubusercontent.com/14188580/114931298-ad03ed80-9dfb-11eb-9541-a2c3155c637f.PNG)
 
 <br>
-The image above is an accumulation of all job-title counts for 4 different categorizations:<br>
+The image above is an accumulation of all job-title counts for 4 different categorizations:
+
 * Total Current Employees
 * Retiring Count - All Current Employees Eligible for Retirement in the Next Few Years
 * Mentorship Eligible Count - Current Employees who Fall Into the Age range of Those Eligible for Mentoring
