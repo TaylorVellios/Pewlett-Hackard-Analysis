@@ -52,7 +52,7 @@ WHERE (emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 	 AND (tit.to_date = '9999-01-01')
 ORDER BY tit.emp_no;
 ~~~~
-<br>
+<br></br>
 Becomes..
 <br></br>
 ![pic4](https://user-images.githubusercontent.com/14188580/114931282-a7a6a300-9dfb-11eb-8e2f-f82cda6d3db1.PNG)
